@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Powerhouse Gym | Your Fitness Journey Starts Here</title>
+    <!-- Inline critical CSS for faster rendering -->
+    <style>
+        body {
+            font-family: 'Roboto', sans-serif;
+            margin: 0;
+            padding: 0;
+            line-height: 1.6;
+            background-color: #f4f4f4;
+            color: #333;
+        }
+
+        #hero {
+            background: url('gym-background.webp') no-repeat center center/cover;
+            height: 100vh;
+            color: #fff;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            position: relative;
+        }
+
+        .cta-button {
+            background-color: #e63946;
+            color: #fff;
+            padding: 15px 40px;
+            text-decoration: none;
+            border-radius: 50px;
+            font-size: 1.2em;
+            transition: background-color 0.3s ease;
+            box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.3);
+        }
+
+        .cta-button:hover {
+            background-color: #d62828;
+            transform: scale(1.05);
+        }
+    </style>
+    <!-- Combined and minified external CSS -->
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <section id="hero">
+        <div class="hero-content">
+            <h1>Welcome to Powerhouse Gym</h1>
+            <p>Your Fitness Journey Starts Here</p>
+            <a href="#contact" class="cta-button">Join Us Today</a>
+        </div>
+    </section>
+
+    <section id="about">
+        <h2>About Us</h2>
+        <p>At Powerhouse Gym, we are committed to helping you reach your fitness goals. Our state-of-the-art facility,
+            experienced trainers, and wide range of fitness programs are designed to support every individual, no matter
+            your level of fitness.</p>
+    </section>
+
+    <section id="services">
+        <h2>Our Services</h2>
+        <div class="service">
+            <h3>Personal Training</h3>
+            <p>Receive one-on-one guidance from our certified trainers who will create a workout plan tailored
+                specifically to your needs.</p>
+        </div>
+        <div class="service">
+            <h3>Group Classes</h3>
+            <p>Join our variety of group classes, including yoga, HIIT, spin, and more, to stay motivated and enjoy the
+                social aspects of fitness.</p>
+        </div>
+        <div class="service">
+            <h3>Nutrition Counseling</h3>
+            <p>Work with our nutrition experts to create a personalized meal plan that complements your fitness routine
+                and helps you achieve your goals faster.</p>
+        </div>
+    </section>
+
+    <section id="classes">
+        <h2>Classes Schedule</h2>
+        <ul>
+            <li>Monday: Yoga - 9:00 AM</li>
+            <li>Tuesday: HIIT - 7:00 AM</li>
+            <li>Wednesday: Spin Class - 6:00 PM</li>
+            <li>Thursday: Pilates - 8:00 AM</li>
+            <li>Friday: Cardio Blast - 5:00 PM</li>
+        </ul>
+    </section>
+
+    <section id="testimonials">
+        <h2>What Our Clients Say</h2>
+        <blockquote>
+            <p>"Powerhouse Gym has transformed my life! The trainers are incredibly supportive, and the group classes
+                are always challenging yet fun."</p>
+            <footer>- Sarah W.</footer>
+        </blockquote>
+        <blockquote>
+            <p>"I've been coming to Powerhouse Gym for over a year now, and it's the best decision I've made for my
+                health. The environment is welcoming and motivating."</p>
+            <footer>- Michael T.</footer>
+        </blockquote>
+    </section>
+
+    <section id="contact">
+        <h2>Contact Us</h2>
+        <form action="#" method="post">
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required>
+
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+
+            <label for="message">Message:</label>
+            <textarea id="message" name="message" required></textarea>
+
+            <button type="submit">Send Message</button>
+        </form>
+    </section>
+
+    <footer>
+        <div class="social-media">
+            <a href="#">Facebook</a> |
+            <a href="#">Twitter</a> |
+            <a href="#">Instagram</a>
+        </div>
+        <p>&copy; 2024 Powerhouse Gym | All Rights Reserved</p>
+    </footer>
+
+    <!-- Deferred and combined JavaScript -->
+    <script defer src="scripts.js"></script>
+
+    <!-- Inline small JavaScript -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const form = document.querySelector('form');
+
+            form.addEventListener('submit', function (event) {
+                event.preventDefault();
+
+                const name = document.getElementById('name').value;
+                const email = document.getElementById('email').value;
+                const message = document.getElementById('message').value;
+
+                if (name && email && message) {
+                    alert('Thank you for your message! We will get back to you shortly.');
+                    form.reset();
+                } else {
+                    alert('Please fill out all fields.');
+                }
+            });
+        });
+    </script>
+</body>
+
+</html>
